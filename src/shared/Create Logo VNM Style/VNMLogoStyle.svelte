@@ -1,4 +1,5 @@
 <script>
+	import RoundedSwitch from '../Toggle Switch/RoundedSwitch.svelte';
 	import domtoimage from 'dom-to-image';
 	let brandName = 'Vinamilk';
 	let establishAbbreviation = 'EST';
@@ -6,8 +7,11 @@
 	let logoNode;
 	let downloadLinkNode;
 	let logoType;
-	let roundedCorner;
+	let roundedCorner = false;
 	let size = 10;
+	let handleToggleSwitch = (e) => {
+		roundedCorner = e.detail;
+	};
 	$: resultPadding = 3;
 	$: lowerInfoSize = 2;
 	let changeSize = () => {
@@ -92,31 +96,27 @@
 				<option value="inverted">Inverted</option>
 			</select>
 		</div>
-		<div class="input-part">
-			<label for="rounded-corner">Rounded Corner: </label>
-			<select
-				bind:value={roundedCorner}
-				name="rounded-corner"
-				id="rounded-corner"
-				disabled={logoType === 'default'}
-			>
-				<option value={true}>Nahh, for what?</option>
-				<option value={false}>Yepp, use them!</option>
-			</select>
-		</div>
-		<div class="input-part">
-			<label for="border-radius">Rounded Corner Radius: </label>
-			<select
-				name=""
-				id="border-radius"
-				disabled={roundedCorner === true}
-				bind:value={borderRadius}
-			>
-				{#each { length: 500 } as _, i}
-					<option value={i + 10}>{i + 10}px</option>
-				{/each}
-			</select>
-		</div>
+		{#if logoType === 'inverted'}
+			<div class="input-part">
+				<label for="rounded-corner">Rounded Corner: </label>
+				<RoundedSwitch on:toggle={handleToggleSwitch} />
+			</div>
+			{#if roundedCorner}
+				<div class="input-part">
+					<label for="border-radius">Rounded Corner Radius: </label>
+					<select
+						name=""
+						id="border-radius"
+						disabled={roundedCorner === true}
+						bind:value={borderRadius}
+					>
+						{#each { length: 500 } as _, i}
+							<option value={i + 10}>{i + 10}px</option>
+						{/each}
+					</select>
+				</div>
+			{/if}
+		{/if}
 	</form>
 	<div class="result-container">
 		<div
@@ -239,6 +239,7 @@
 		transition: all 0.4s ease;
 	}
 	.result-container {
+		margin: 1em;
 		display: flex;
 		justify-content: center;
 		font-family: 'VNMSansDisplayBold' !important;

@@ -1,5 +1,6 @@
 <!-- This one returns the processed chat -->
 <script>
+	import { RPD_API_KEY } from '../../../stores/api';
 	import ThreeBouncingBalls from '../../Waiting/ThreeBouncingBalls.svelte';
 	let isWaiting = false;
 	let userInput = '';
@@ -8,28 +9,10 @@
 		isWaiting = true;
 		messages.push({ name: 'bot', message: '' });
 		let getRes = async () => {
-			// Simsimi
-			// let url = 'https://cors-anywhere.herokuapp.com/https://api.simsimi.vn/v1/simtalk';
-			// let headers = new Headers();
-			// headers.set('Content-Type', 'application/x-www-form-urlencoded');
-			// let body = new URLSearchParams({
-			// 	text: 'hi',
-			// 	lc: 'en'
-			// });
-			// let method = 'POST';
-			// let raw = await fetch(url, { method, headers, body });
-			// let res = await raw.json();
-			// if (raw.ok) {
-			// 	messages[messages.length - 1].message = res.message;
-			// } else {
-			// 	messages[messages.length - 1].message = 'Out of request';
-			// }
-			//
-
 			// AI Chatbot Based on Chat GPT
 			let url = `https://ai-chatbot.p.rapidapi.com/chat/free?uid=user1&message=${message}`;
 			let headers = new Headers();
-			headers.set('X-RapidAPI-Key', '216a2abfa3msh5c20bb37e09f059p119544jsnbdad83e7ab0f');
+			headers.set('X-RapidAPI-Key', $RPD_API_KEY);
 			headers.set('X-RapidAPI-Host', 'ai-chatbot.p.rapidapi.com');
 			let raw = await fetch(url, { headers });
 			let res = await raw.json();

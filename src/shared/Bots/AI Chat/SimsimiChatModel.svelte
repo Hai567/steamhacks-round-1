@@ -74,10 +74,10 @@
 			class="flex p-1 border-2 rounded w-full"
 			method="post"
 		>
-			<select class="dark:text-black rounded-l" name="lang" id="">
+			<!-- <select class="dark:text-black rounded-l" name="lang" id="">
 				<option value="vn">VIE</option>
 				<option value="en" selected>ENG</option>
-			</select>
+			</select> -->
 			<input
 				class="grow text-black border-0"
 				type="text"
@@ -97,7 +97,7 @@
 </div>
 
 <style>
-	select {
+	/* select {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		appearance: none;
@@ -107,7 +107,7 @@
 		border: none;
 		border-right: 2px solid rgb(226 232 240);
 		font-weight: 1em;
-	}
+	} */
 	input:focus,
 	input:focus-visible {
 		outline: none;

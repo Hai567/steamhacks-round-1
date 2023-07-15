@@ -1,5 +1,6 @@
 <!-- This one returns the processed chat -->
 <script>
+	import { RPD_API_KEY } from '../../../stores/api';
 	import ThreeBouncingBalls from '../../Waiting/ThreeBouncingBalls.svelte';
 	let isWaiting = false;
 	let userInput = '';
@@ -8,23 +9,31 @@
 		isWaiting = true;
 		messages.push({ name: 'bot', message: '' });
 		let getRes = async () => {
-			// Chat GPT
-			const url = 'https://open-ai21.p.rapidapi.com/chat';
+			const url = 'https://chatgpt-chatgpt3-5-chatgpt4.p.rapidapi.com/v1/chat/completions';
 			const options = {
 				method: 'POST',
 				headers: {
 					'content-type': 'application/json',
-					'X-RapidAPI-Key': '216a2abfa3msh5c20bb37e09f059p119544jsnbdad83e7ab0f',
-					'X-RapidAPI-Host': 'open-ai21.p.rapidapi.com'
+					'X-RapidAPI-Key': $RPD_API_KEY,
+					'X-RapidAPI-Host': 'chatgpt-chatgpt3-5-chatgpt4.p.rapidapi.com'
 				},
-				body: JSON.stringify({ message: 'Hello' })
+				body: JSON.stringify({
+					model: 'gpt-3.5-turbo',
+					messages: [
+						{
+							role: 'user',
+							content: message
+						}
+					],
+					temperature: 0.8
+				})
 			};
 			try {
 				let raw = await fetch(url, options);
 				let res = await raw.json();
-				console.log(raw, res);
-				if (raw.ok && !res.error) {
-					messages[messages.length - 1].message = res.ChatGPT;
+				if (raw.status === 200 && !res.error) {
+					messages[messages.length - 1].message = res.choices[0].message.content;
+				} else if (raw.status === 429) {
 				} else {
 					messages[messages.length - 1].message = 'Error occurred, please contact developer.';
 				}
