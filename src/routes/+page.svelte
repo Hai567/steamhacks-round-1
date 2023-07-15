@@ -18,7 +18,7 @@
 			<div class="info">
 				<h4>Introducing this project for SteamHacks</h4>
 				<p>
-					To open the menu, click on the 3 horizontal lines circle on the top right of the screen
+					To open the menu, click on the 2 horizontal lines circle on the top right of the screen
 				</p>
 				<p>In the <a href="/app">Chatbots</a>, i created 3 bots that you can give it a try</p>
 				<ul style="margin-left: 20px;">
@@ -56,7 +56,7 @@
 		{:else if chosenLang === 'vi'}
 			<div class="info">
 				<h4>Giới thiệu dự án tham gia SteamHacks</h4>
-				<p>Để mở menu, nhấn vào nút có hình 3 thanh ngang trên đầu bên phải</p>
+				<p>Để mở menu, nhấn vào nút có hình 2 thanh ngang trên đầu bên phải</p>
 				<p>Phần <a href="/app">Chatbots</a> mình đã tạo 3 con bots để lựa chọn</p>
 				<ul style="margin-left: 20px;">
 					<li>"AI Chatbot" là một con bot bình thường, không thông minh lắm :))))</li>
@@ -81,8 +81,8 @@
 					<li>
 						<p>
 							<a href="/portfolio">Portfolio</a> vào đây để xem thêm thông tin của mình nhé, trong
-							này có <strong> rất nhiều animations </strong>, chiếm tới 70% thời gian làm của mình
-							thế nên nhớ vào nhé!!!!
+							này có <strong> rất nhiều animations </strong>, chiếm tới 70% thời gian làm của mình.
+							Thế nên nhớ vào nhé!!!!
 							<strong><a href="/portfolio">Nhớ đấyyyyyyyy!!!!!!</a></strong>
 						</p>
 					</li>

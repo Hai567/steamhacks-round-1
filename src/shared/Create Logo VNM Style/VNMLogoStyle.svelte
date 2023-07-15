@@ -150,7 +150,8 @@
 	}
 	.intro {
 		width: 100%;
-		height: 100vh;
+		height: 150vh;
+		padding: 3em;
 		background-color: black;
 		position: fixed;
 		z-index: 2;
@@ -162,6 +163,8 @@
 		font-family: 'Roboto';
 		-webkit-user-drag: none;
 		user-select: none;
+		display: flex;
+		padding-bottom: 60vh;
 	}
 	.intro h2 {
 		margin-top: 4em;
@@ -170,7 +173,6 @@
 	}
 	.intro img {
 		width: 310px;
-		position: absolute;
 		top: 0;
 		bottom: 0;
 		margin: auto;
@@ -187,7 +189,7 @@
 	@media screen and (orientation: landscape) {
 		.intro {
 			position: absolute;
-			top: -100vh;
+			top: -150vh;
 		}
 		main.container {
 			display: block;
