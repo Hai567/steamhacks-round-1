@@ -3,6 +3,10 @@
 	let chosenLang = 'vi';
 </script>
 
+<svelte:head>
+	<title>Home • Dashboard</title>
+</svelte:head>
+
 <SplashIntro />
 <main class="dash-board-container">
 	<div class="smaller-container glass-effect">

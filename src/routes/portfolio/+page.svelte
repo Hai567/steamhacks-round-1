@@ -4,6 +4,10 @@
 	import ScrollToTopButton from '../../shared/ScrollToTopButton/ScrollToTopButton.svelte';
 </script>
 
+<svelte:head>
+	<title>Portfolio • About me</title>
+</svelte:head>
+
 <main class="main-container">
 	<SplashIntro />
 	<ParallaxBackground />
