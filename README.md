@@ -1,38 +1,44 @@
-# create-svelte
+## Badges
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Creating a project
+# Steamhacks' Project
 
-If you're seeing this, you've probably already done this step. Congrats!
+This is the Steamhacks' round 1 project "Website implemented AI"
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## How to run locally
 
-# create a new project in my-app
-npm create svelte@latest my-app
+To run the project locally on your computer, clone it first then locate to the project' folder and install pakages .
+
+```
+git clone https://github.com/Hai567/steam-hacks
+cd steam-hacks
+npm install
 ```
 
-## Developing
+Go to https://rapidapi.com/developer/authorization, login or sign up and get the api key.
+![Example](https://files.readme.io/1cd7723-small-api-keys.png)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+After that, naviagate to "/src/stores", open file named "api.js", replace API_KEY with your api key that you got before. P/S: Your api key must be in the quotation marks.
 
-```bash
-npm run dev
+Then
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+Go to https://cors-anywhere.herokuapp.com/corsdemo, request a temporary use
+and open http://localhost:4173/ in your browser. Now it should be all ready
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Features
+
+- Light/dark mode toggle in chat
+- Live previews
+- Perfect responsive (from my POV :D)
+- 3 AI bots ready to use (ChatGPT supports all languages)
+- Lots of cool animations :)
+
+## License
+
+Feel free to use this project locally but not for deployment.
