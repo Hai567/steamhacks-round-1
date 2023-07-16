@@ -1,3 +1,6 @@
+## Github Link
+https://github.com/Hai567/steamhacks-round-1
+
 ## Badges
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
@@ -14,7 +17,7 @@ This is the Steamhacks' round 1 project "Website implemented AI"
 To run the project locally on your computer, clone it first then locate to the project' folder and install pakages .
 
 ```
-git clone https://github.com/Hai567/steam-hacks
+git clone https://github.com/Hai567/steam-hacks-round-1
 cd steam-hacks
 npm install
 ```

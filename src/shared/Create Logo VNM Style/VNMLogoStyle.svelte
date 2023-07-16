@@ -1,5 +1,4 @@
 <script>
-	import RoundedSwitch from '../Toggle Switch/RoundedSwitch.svelte';
 	import domtoimage from 'dom-to-image';
 	let brandName = 'Vinamilk';
 	let establishAbbreviation = 'EST';
@@ -7,11 +6,7 @@
 	let logoNode;
 	let downloadLinkNode;
 	let logoType;
-	let roundedCorner = false;
 	let size = 10;
-	let handleToggleSwitch = (e) => {
-		roundedCorner = e.detail;
-	};
 	$: resultPadding = 3;
 	$: lowerInfoSize = 2;
 	let changeSize = () => {
@@ -96,21 +91,19 @@
 				<option value="inverted">Inverted</option>
 			</select>
 		</div>
+		
 		{#if logoType === 'inverted'}
 			<div class="input-part">
-				<label for="rounded-corner">Rounded Corner: </label>
-				<RoundedSwitch on:toggle={handleToggleSwitch} />
+				<label for="border-radius">Rounded Corner Radius: </label>
+				<select name="" id="border-radius" bind:value={borderRadius}>
+					<option value="0" selected>0</option>
+					<option value="15" selected>15</option>
+					<option value="25" selected>25</option>
+					<option value="35" selected>35</option>
+					<option value="45" selected>45</option>
+					<option value="55" selected>55</option>
+				</select>
 			</div>
-			{#if roundedCorner}
-				<div class="input-part">
-					<label for="border-radius">Rounded Corner Radius: </label>
-					<select name="" id="border-radius" bind:value={borderRadius}>
-						{#each { length: 500 } as _, i}
-							<option value={i + 10}>{i + 10}px</option>
-						{/each}
-					</select>
-				</div>
-			{/if}
 		{/if}
 	</form>
 	<div class="result-container">
