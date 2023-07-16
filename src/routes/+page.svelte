@@ -92,7 +92,7 @@
 					</li>
 				</ul>
 				<p>
-					<strong>P/S: </strong>Trang này chủ yếu bằng tiếng anh nhé, mãi mình mới nhớ để dịch:))))
+					<strong>P/S: </strong>Project này chủ yếu bằng tiếng anh nhé
 				</p>
 			</div>
 		{/if}
