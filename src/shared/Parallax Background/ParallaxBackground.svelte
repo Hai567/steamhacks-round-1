@@ -11,6 +11,11 @@
 		class="hill1"
 	/>
 	<img src="/imgs/parallax-background/hill2.png" alt="" class="hill2" />
+	<!-- Optional -->
+	<div class="parallax-center-text-container">
+		<h2 style="bottom: -{scroll}px;" class="inline text-6xl text-white font-bold">Portfolio</h2>
+	</div>
+	<!-- Optional -->
 	<img src="/imgs/parallax-background/hill3.png" alt="" class="hill3" />
 	<img src="/imgs/parallax-background/hill4.png" style="left: {-scroll}px;" alt="" class="hill4" />
 	<img src="/imgs/parallax-background/hill5.png" alt="" class="hill5" />
@@ -25,6 +30,21 @@
 </div>
 
 <style>
+	.parallax-center-text-container {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+	}
+	.parallax-center-text-container h2 {
+		font-family: Poppins;
+		transform: translate(0, -200%);
+		position: relative;
+	}
 	.hill2 {
 		top: -30px !important;
 	}

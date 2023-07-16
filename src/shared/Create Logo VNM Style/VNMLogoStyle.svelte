@@ -104,12 +104,7 @@
 			{#if roundedCorner}
 				<div class="input-part">
 					<label for="border-radius">Rounded Corner Radius: </label>
-					<select
-						name=""
-						id="border-radius"
-						disabled={roundedCorner === true}
-						bind:value={borderRadius}
-					>
+					<select name="" id="border-radius" bind:value={borderRadius}>
 						{#each { length: 500 } as _, i}
 							<option value={i + 10}>{i + 10}px</option>
 						{/each}
@@ -133,7 +128,7 @@
 		</div>
 	</div>
 	<form class="download-form" action="" on:submit|preventDefault={generateLogo}>
-		<a bind:this={downloadLinkNode} href="" class="download-link" download
+		<a bind:this={downloadLinkNode} href="" class="download-link" download="logo.png"
 			><button class="bg-slate-200 rounded">Download</button></a
 		>
 	</form>

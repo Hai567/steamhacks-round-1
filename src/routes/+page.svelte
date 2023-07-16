@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Home • Dashboard</title>
+	<title>Home •  Dashboard</title>
 </svelte:head>
 
 <SplashIntro />
