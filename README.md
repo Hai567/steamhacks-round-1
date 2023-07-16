@@ -22,7 +22,7 @@ npm install
 Go to https://rapidapi.com/developer/authorization, login or sign up and get the api key.
 ![Example](https://files.readme.io/1cd7723-small-api-keys.png)
 
-After that, naviagate to "/src/stores", create a file named "api.js" 
+After that, naviagate to "/src", create a folder name "store" with a file named "api.js" inside
 ```
 import { readable } from 'svelte/store';
 
