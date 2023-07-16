@@ -2,6 +2,9 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
+# Live Project
+https://steam-hacks.vercel.app/
+
 # Steamhacks' Project
 
 This is the Steamhacks' round 1 project "Website implemented AI"
@@ -19,7 +22,13 @@ npm install
 Go to https://rapidapi.com/developer/authorization, login or sign up and get the api key.
 ![Example](https://files.readme.io/1cd7723-small-api-keys.png)
 
-After that, naviagate to "/src/stores", open file named "api.js", replace API_KEY with your api key that you got before. P/S: Your api key must be in the quotation marks.
+After that, naviagate to "/src/stores", create a file named "api.js" 
+```
+import { readable } from 'svelte/store';
+
+export const RPD_API_KEY = readable("API_KEY");
+```
+replace API_KEY with your api key that you got before. P/S: Your api key must be in the quotation marks ("").
 
 Then
 
